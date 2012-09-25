@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RTCS2 Sample</title>
+	<link href="/resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="#">RTCS2</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class="active"><a href="/">Home</a></li>
+					<li class=""><a href="/howto">Get started</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="hero-unit">
+		<h1>RTCS2 Embedded</h1>
+		<p>RTCS2 Embedded 라이브러리를 사용하면 Verticle(Vert.x 기반 애플리케이션)을 스프링 기반 애플리케이션에 손쉽게 내장하여 사용할 수 있습니다.</p>
+		<p><a href="/howto" class="btn btn-primary btn-large">Learn more >></a></p>
+	</div>
+	<footer>
+		<hr/>
+		<p>@ NHN 2012</p>
+	</footer>
+</div>
+
+<script src="resources/js/jquery-1.7.2.min.js"></script>
+<script src="http://localhost:19999/socket.io/socket.io.js"></script>
+<!--<script src="resources/js/socket.io.js"></script>-->
+<script src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var socket = io.connect("http://localhost:19999");
+		socket.on('connect', function(){
+			console.log('connected');
+		})
+	});
+</script>
+</body>
+</html>
