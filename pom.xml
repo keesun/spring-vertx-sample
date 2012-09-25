@@ -15,8 +15,8 @@
 
 	<repositories>
 		<repository>
-			<id>nhn</id>
-			<url>http://repo.nhncorp.com/nexus/content/groups/nhn/</url>
+			<id>SpringSprout</id>
+			<url>http://dev.springsprout.org/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 
@@ -53,11 +53,6 @@
 			<groupId>com.nhncorp</groupId>
 			<artifactId>mod-socket-io</artifactId>
 			<version>0.9.10</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
