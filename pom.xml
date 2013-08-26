@@ -15,8 +15,8 @@
 
 	<repositories>
 		<repository>
-			<id>SpringSprout</id>
-			<url>http://dev.springsprout.org/nexus/content/groups/public</url>
+		    <id>my.mvn.repo</id>
+		    <url>https://github.com/keesun/mvn-repo/raw/master</url>
 		</repository>
 	</repositories>
 
@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>com.nhncorp</groupId>
 			<artifactId>mod-socket-io</artifactId>
-			<version>0.9.10</version>
+			<version>0.9.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
