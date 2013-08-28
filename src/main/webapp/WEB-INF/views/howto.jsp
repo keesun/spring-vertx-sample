@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>RTCS2 Sample</title>
+    <title>Spring+Vert.x Sample</title>
     <link href="/resources/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/css/prettify.css" rel="stylesheet">
@@ -17,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">RTCS2</a>
+            <a class="brand" href="#">Whiteship</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class=""><a href="/">Home</a></li>
@@ -28,27 +28,27 @@
     </div>
 </div>
 <div class="container">
-    <h2>First</h2>
-    <p>NHN 메이븐 저장소 설정을 pom.xml에 추가합니다.</p>
+    <h2>1단계</h2>
+    <p>mod-socket-io가 들어있는 메이븐 저장소 설정을 pom.xml에 추가합니다.</p>
 <pre class="prettyprint linenums languague-xml">
 &lt;repositories&gt;
     ...
     &lt;repository&gt;
         &lt;id&gt;nhn&lt;/id&gt;
-        &lt;url&gt;http://repo.nhncorp.com/nexus/content/groups/nhn/&lt;/url&gt;
+        &lt;url&gt;https://github.com/keesun/mvn-repo/raw/master&lt;/url&gt;
     &lt;/repository&gt;
 &lt;/repositories&gt;
 </pre>
-    <h2>Second</h2>
+    <h2>2단계</h2>
     <p>mod-socket-io 라이브러리를 dependency에 추가합니다.</p>
 <pre class="prettyprint linenums languague-xml">
 &lt;dependency&gt;
     &lt;groupId&gt;com.nhncorp&lt;/groupId&gt;
     &lt;artifactId&gt;mod-socket-io&lt;/artifactId&gt;
-    &lt;version&gt;0.9&lt;/version&gt;
+    &lt;version&gt;1.0.1&lt;/version&gt;
 &lt;/dependency&gt;
 </pre>
-    <h2>Third</h2>
+    <h2>3단계</h2>
     <p><code>DefaultEmbeddableVerticle</code>을 상속받아 Verticle을 작성하고 빈으로 등록합니다.</p>
 <pre class="prettyprint linenums languague-java">
 @Component
@@ -72,7 +72,7 @@ public class SampleVerticle extends DefaultEmbeddableVerticle {
     }
 }
 </pre>
-    <h2>Forth</h2>
+    <h2>4단계</h2>
     <p>클라이언트를 작성합니다.</p>
 <pre class="prettyprint linenums languague-java">
 var socket = io.connect("http://localhost:19999");
@@ -80,9 +80,9 @@ socket.on('connect', function(){
     console.log('connected');
 });
 </pre>
-    <h2>Last</h2>
+    <h2>5단계(끝)</h2>
     <p>스프링 웹 애플리케이션을 실행하면 Verticle도 실행되고 애플리케이션을 종료하면 Verticle로 종료됩니다.</p>
-    <button id="testBtn" class="btn btn-info">Test Node.js</button>
+    <button id="testBtn" class="btn btn-info">Test Vert.x</button>
     <button id="testBtn2" class="btn btn-info">Test Spring MVC</button>
     <footer>
         <hr/>

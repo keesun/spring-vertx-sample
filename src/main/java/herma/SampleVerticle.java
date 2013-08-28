@@ -4,6 +4,7 @@ import com.nhncorp.mods.socket.io.SocketIOServer;
 import com.nhncorp.mods.socket.io.SocketIOSocket;
 import com.nhncorp.mods.socket.io.impl.DefaultSocketIOServer;
 import com.nhncorp.mods.socket.io.spring.DefaultEmbeddableVerticle;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.Vertx;
