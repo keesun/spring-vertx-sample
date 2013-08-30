@@ -21,6 +21,7 @@ public class SpringController {
 
 	@RequestMapping("/send")
 	public @ResponseBody String send(){
+        // logic
 		sampleVerticle.getIo().sockets().emit("echo", new JsonObject().putString("data", "hello spring"));
 		return "ok";
 	}
